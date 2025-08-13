@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .noto-serif-font{
   font-family: "Noto Serif", serif;
 }
@@ -21,6 +26,9 @@
     font-size: 22px;
     color: rgba(0, 0, 0, 0.5);
 }
+.span-text{
+    color: rgba(233, 90, 8, 1);
+}
 .list-item{
     margin-top: 20px;
 }
@@ -41,6 +49,58 @@
 .section-gap{
     margin-top: 60px;
 }
+
+.deals-heading{
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.deals-heading p{
+    text-align: center;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 120px;
+}
+.card{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    height: 200px;
+    border-radius: 15px;
+}
+.card span{
+    text-decoration: underline;
+}
+.bloom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(images/deal-bloom.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ana{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(images/deal-ana.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.zabo{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(images/deal-zabo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}
+
 @media screen and (max-width:576px) {
     .flower-container{
       flex-direction: column; 
@@ -64,5 +124,16 @@
     }
     .list-item{
         margin-top: 16px;
+    }
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 46px;
+    }
+    .card{
+        height: 206px;
+    }
+    .zabo{
+        grid-column: auto;
+        grid-row: auto;
     }
 }
